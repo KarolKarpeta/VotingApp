@@ -1,0 +1,20 @@
+<h1 style="margin: 1em;">Vote!</h1>
+
+<form [formGroup]="voteForm" (ngSubmit)="vote()">
+    <div class="form-group">
+      
+      <select class="form-control" name="voter" formControlName="voter">
+        <option [ngValue]="null">I am</option>
+        <ng-container *ngFor="let voter of dataService.voters.votersList">  
+            <option [ngValue]="voter.name" *ngIf="!voter.hasVoted">{{ voter.name }}</option>
+        </ng-container>
+      </select>
+
+      <select class="form-control" name="candidate" formControlName="candidate">
+        <option [ngValue]="null">I vote for</option>
+        <option [ngValue]="candidate.name" *ngFor="let candidate of dataService.candidates.candidatesList">{{ candidate.name }}</option>
+      </select>
+
+      <button type="submit" class="btn btn-secondary">Submit!</button>
+    </div>
+  </form>

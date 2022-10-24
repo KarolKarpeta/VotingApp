@@ -1,0 +1,13 @@
+.form-group {
+    width: 900px;
+    display: flex;
+    margin-left: 2em;
+}
+
+.form-control {
+    margin: 1em;
+}
+
+.btn-secondary {
+    margin: 1em;
+}

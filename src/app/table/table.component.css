@@ -1,0 +1,22 @@
+:host {
+    width: 500px;
+}
+
+.header {
+    text-align: center;
+}
+
+.table {
+    border: solid grey;
+    margin-left: 1em;
+}
+
+.bi-plus-circle {
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.cell {
+    text-align: center;
+}
